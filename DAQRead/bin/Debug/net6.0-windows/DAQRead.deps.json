@@ -8,10 +8,19 @@
     ".NETCoreApp,Version=v6.0": {
       "DAQRead/1.0.0": {
         "dependencies": {
+          "NationalInstruments.Common": "19.1.40.49152",
           "NationalInstruments.DAQmx": "22.5.45.49247"
         },
         "runtime": {
           "DAQRead.dll": {}
+        }
+      },
+      "NationalInstruments.Common/19.1.40.49152": {
+        "runtime": {
+          "NationalInstruments.Common.dll": {
+            "assemblyVersion": "19.1.40.49152",
+            "fileVersion": "19.1.40.49152"
+          }
         }
       },
       "NationalInstruments.DAQmx/22.5.45.49247": {
@@ -27,6 +36,11 @@
   "libraries": {
     "DAQRead/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NationalInstruments.Common/19.1.40.49152": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

@@ -18,3 +18,5 @@ C:\Users\Gustavo\source\repos\DAQRead\DAQRead\obj\Debug\net6.0-windows\refint\DA
 C:\Users\Gustavo\source\repos\DAQRead\DAQRead\obj\Debug\net6.0-windows\DAQRead.pdb
 C:\Users\Gustavo\source\repos\DAQRead\DAQRead\obj\Debug\net6.0-windows\DAQRead.genruntimeconfig.cache
 C:\Users\Gustavo\source\repos\DAQRead\DAQRead\obj\Debug\net6.0-windows\ref\DAQRead.dll
+C:\Users\Gustavo\source\repos\DAQRead\DAQRead\bin\Debug\net6.0-windows\NationalInstruments.Common.dll
+C:\Users\Gustavo\source\repos\DAQRead\DAQRead\bin\Debug\net6.0-windows\NationalInstruments.Common.xml
