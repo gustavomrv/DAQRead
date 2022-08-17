@@ -64,5 +64,42 @@ namespace DAQRead
 
             textBox2.Text = analogDataIn2.ToString("0.00");
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Task analogInTask = new Task();
+            Task analogInTask2 = new Task();
+
+            AIChannel myAIChannel;
+            AIChannel myAIChannel2;
+
+            myAIChannel = analogInTask.AIChannels.CreateVoltageChannel(
+                "dev1/ai0",
+                "myAIChannel",
+                AITerminalConfiguration.Differential,
+                0,
+                10,
+                AIVoltageUnits.Volts
+                );
+
+            myAIChannel2 = analogInTask2.AIChannels.CreateCurrentChannel(
+                "dev/ai0",
+                "myAIChannel",
+                AITerminalConfiguration.Differential,
+                0,
+                20,
+                AICurrentUnits.Amps
+                );
+
+            AnalogSingleChannelReader reader = new AnalogSingleChannelReader(analogInTask.Stream);
+            AnalogSingleChannelReader reader2 = new AnalogSingleChannelReader(analogInTask2.Stream);
+
+            double analogDataIn = reader.ReadSingleSample();
+            double analogDataIn2 = reader2.ReadSingleSample();
+
+            double analogDataInPot = analogDataIn * analogDataIn2; 
+
+            textBox3.Text = analogDataInPot.ToString("0.00");
+        }
     }
 }
