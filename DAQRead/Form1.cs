@@ -26,6 +26,7 @@ namespace DAQRead
             Task analogInTask = new Task();
 
             AIChannel myAIChannel;
+            AIChannel myAIChannel2;
 
             myAIChannel = analogInTask.AIChannels.CreateVoltageChannel(
                 "dev1/ai0",
@@ -35,6 +36,33 @@ namespace DAQRead
                 10,
                 AIVoltageUnits.Volts
                 );
+
+            myAIChannel2 = analogInTask.AIChannels.CreateCurrentChannel(
+                "dev/ai0",
+                "myAIChannel",
+                AITerminalConfiguration.Differential,
+                0,
+                20,
+                AICurrentUnits.Amps
+                );
+
+            myAIChannel2 = analogInTask.AIChannels.CreateCurrentChannel(
+                "dev/ai0",
+                "myAIChannel",
+                AITerminalConfiguration.Differential,
+                0,
+                20,
+                AICurrentUnits.Amps
+                );
+
+            //myAIChannel2 = analogInTask.AIChannels.CreateResistanceChannel(
+            //    "dev/ai0",
+            //    "myAIChannel",
+            //    AITerminalConfiguration.Differential,
+            //    0,
+            //    20,
+            //    AIResistanceUnits.Ohms,
+            //    );
 
             AnalogSingleChannelReader reader = new AnalogSingleChannelReader(analogInTask.Stream);
 
